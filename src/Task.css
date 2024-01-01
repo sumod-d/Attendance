@@ -1,0 +1,16 @@
+.container{
+    background-color: aliceblue;
+    justify-items: center;
+    height: max-content;
+    
+}
+
+.switch-button{
+    text-align: center;
+    height: fit-content;
+    padding: 50px;
+
+}
+.calender{
+    padding: 20px;
+}
