@@ -1,0 +1,96 @@
+.Attendance{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 30vh;
+    padding: top 25vh; ;
+    background-color: #4461F2;
+  }
+.react-switch-checkbox {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.react-switch-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 300px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    position: relative;
+    transition: background-color 0.2s;
+    border-radius: 30px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.20);
+   
+}
+
+.react-switch-label .react-switch-button {
+    content: "";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 158px;
+    height: 56px;
+    flex-shrink: 0;
+    color: white;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 25px;
+    margin-top: 0px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 0px;
+
+    border-radius: 45px;
+    transition: 0.2s;
+    background: #fff;
+    box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+    border-radius: 30px;
+    background: #EC8623;
+    box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.15);
+
+    
+
+
+}
+
+
+
+
+.react-switch-checkbox:checked+.react-switch-label .react-switch-button {
+    left: calc(100% - 1px);
+    border-radius: 30px;
+    background-color: white;
+    transform: translateX(-100%);
+    color: blue;
+    text-align: center;
+
+}
+
+.react-switch-label:active .react-switch-button {
+    width: 60px;
+}
+.checkIn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-left: 15%;
+}
+
+.checkOut{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-right: 15%;
+
+}

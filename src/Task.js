@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Switch from '@mui/material/Switch';
-import DateSelector from './DateSelector';
+// import DateSelector from './DateSelector';
 import './Task.css'
 
 
@@ -43,6 +43,7 @@ function Task() {
                 <p>Attendance App</p>
                 <Switch 
                 size='medium'
+                classes={{root:{width:'200px',height:'100px'}}}
                 checked={isIn} 
                 onChange={handleToggle} 
                 color="primary" />
@@ -56,7 +57,7 @@ function Task() {
 
             <div className='calender'>
                 <h4>Attendance Report</h4>
-                <DateSelector onSelectDate={handleDateChange} />
+                {/* <DateSelector onSelectDate={handleDateChange} /> */}
                 {selectedDate && <p>Selected Date: {selectedDate}</p>}
             </div>
 

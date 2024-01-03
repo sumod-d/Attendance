@@ -6,9 +6,14 @@
 }
 
 .switch-button{
+
     text-align: center;
     height: fit-content;
     padding: 50px;
+
+}
+.switch-button .MuiSwitch-root {
+    width: 200px;
 
 }
 .calender{
