@@ -14,39 +14,39 @@ import Button from '@mui/material/Button';
 
 import CustomSwitch from './CustomSwitch';
 import { useState } from 'react';
-import moment from"moment";
+import moment from "moment";
 
 function Login() {
 
 
 
     const [checkInTime, setCheckInTime] = useState(null);
-  const [checkOutTime, setCheckOutTime] = useState(null);
-  const [isOn, setisOn] = useState(false);
+    const [checkOutTime, setCheckOutTime] = useState(null);
+    const [isOn, setisOn] = useState(false);
 
 
-  const [login, setlogin] = useState(false);
-    const onLogin=()=>{
+    const [login, setlogin] = useState(false);
+    const onLogin = () => {
         setlogin(true);
 
     };
 
-  const handleOnClick = () => {
-    if (isOn) {
-      // Checked out
-      const currentTime = new Date();
-      setCheckOutTime(moment().format('LT'));
-    } else {
-      // Checked in
-      const currentTime = new Date();
-      setCheckInTime(moment().format('LT'));
-    }
+    const handleOnClick = () => {
+        if (isOn) {
+            // Checked out
+            const currentTime = new Date();
+            setCheckOutTime(moment().format('LT'));
+        } else {
+            // Checked in
+            const currentTime = new Date();
+            setCheckInTime(moment().format('LT'));
+        }
 
-    setisOn(!isOn);
-  };
+        setisOn(!isOn);
+    };
 
 
-    
+
 
     const [showPassword, setShowPassword] = React.useState(false);
 
@@ -59,13 +59,13 @@ function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-   
+
 
     return (
         <>
-        {login? <CustomSwitch checkIn={checkInTime} checkOut={checkOutTime} isOn={isOn} handleToggle={handleOnClick} /> : null}
-           
-           <div className='welcome-note'><h3>Welcome  to Attendance</h3></div>
+            {login ? <CustomSwitch checkIn={checkInTime} checkOut={checkOutTime} isOn={isOn} handleToggle={handleOnClick} /> : null}
+
+            <div className='welcome-note'><h3>Welcome  to Attendance</h3></div>
 
             <div className='text-quotes'>
                 <span>The  people who are <br></br>crazy enough to think <br></br> they can change

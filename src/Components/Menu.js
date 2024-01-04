@@ -44,11 +44,11 @@ function Menu(props) {
         ))}
       </List>
       <Divider />
-     
+
     </div>
   );
 
-  
+
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -82,7 +82,7 @@ function Menu(props) {
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
-        //   container={container}
+          //   container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
@@ -112,7 +112,7 @@ function Menu(props) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        
+
       </Box>
     </Box>
   );

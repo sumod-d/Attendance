@@ -1,12 +1,14 @@
-.Attendance{
+.Attendance {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 30vh;
-    padding: top 25vh; ;
+    padding: top 25vh;
+    ;
     background-color: #4461F2;
-  }
+}
+
 .react-switch-checkbox {
     height: 0;
     width: 0;
@@ -27,7 +29,7 @@
     border-radius: 30px;
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.20);
-   
+
 }
 
 .react-switch-label .react-switch-button {
@@ -57,7 +59,7 @@
     background: #EC8623;
     box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.15);
 
-    
+
 
 
 }
@@ -78,7 +80,8 @@
 .react-switch-label:active .react-switch-button {
     width: 60px;
 }
-.checkIn{
+
+.checkIn {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -86,7 +89,7 @@
     padding-left: 15%;
 }
 
-.checkOut{
+.checkOut {
     display: flex;
     align-items: center;
     justify-content: space-between;
