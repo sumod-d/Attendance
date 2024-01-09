@@ -16,10 +16,13 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
 
 const drawerWidth = 240;
 
 function Menu(props) {
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -32,11 +35,11 @@ function Menu(props) {
       <Toolbar />
       <Divider />
       <List>
-        {['Profile', 'History', 'Settings', 'Drafts'].map((text, index) => (
+        {['Profile', 'History', 'Settings', 'Logout'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <AccountCircleIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -51,6 +54,7 @@ function Menu(props) {
 
 
   return (
+    <>
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
@@ -115,6 +119,10 @@ function Menu(props) {
 
       </Box>
     </Box>
+
+
+
+</>
   );
 }
 

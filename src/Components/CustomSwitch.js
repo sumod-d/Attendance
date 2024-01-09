@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import './CustomSwitch.css';
 import Menu from './Menu';
 
@@ -32,9 +31,6 @@ const CustomSwitch = props => {
         }
         <p className="checkOut">{props.checkOut}</p>
       </label>
-
-
-
 
     </div>
 

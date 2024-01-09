@@ -3,10 +3,11 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 30vh;
+    height: 50vh;
     padding: top 25vh;
-    ;
-    background-color: #4461F2;
+    
+    background-color: #4461F2 ;
+    
 }
 
 .react-switch-checkbox {
@@ -21,7 +22,7 @@
     justify-content: space-between;
     cursor: pointer;
     width: 300px;
-    height: 56px;
+    height: 60px;
     flex-shrink: 0;
     border-radius: 100px;
     position: relative;
@@ -40,7 +41,7 @@
     justify-content: center;
 
     width: 158px;
-    height: 56px;
+    height: 60px;
     flex-shrink: 0;
     color: white;
     text-align: center;
