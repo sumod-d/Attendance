@@ -15,11 +15,14 @@ import Button from "@mui/material/Button";
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import axios from "axios";
+import moment from "moment";
 
+import { useDispatch, useSelector } from 'react-redux';
 
 
 function Login(props) {
 
+    const dispatch = useDispatch();
 
     const [showPassword, setShowPassword] = React.useState(false);
 
@@ -29,7 +32,6 @@ function Login(props) {
         event.preventDefault();
     };
 
-
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -37,11 +39,15 @@ function Login(props) {
     const navigate = useNavigate();
 
     const handleUsername = (e) => {
-        setUsername(e.target.value)
+        setUsername(e.target.value);
+        dispatch(setUsername(e.target.value));
     }
     const handlePassword = (e) => {
         setPassword(e.target.value)
     }
+
+    //for login API
+
     const handleApi = () => {
         console.log({ username, password });
         axios.post('https://practeasebe.onrender.com/api/v1/user/login', {
@@ -52,6 +58,8 @@ function Login(props) {
                 console.log(result)
                 props.setLoggedIn(true);
                 // alert('Successful login')
+                getClockInData();
+
 
                 localStorage.setItem("token", result.data.token)
 
@@ -61,6 +69,24 @@ function Login(props) {
                 console.log(error)
             })
 
+        //another API for date and username
+       
+        
+    }
+    const getClockInData= ()=>{
+        axios.get(`https://practeasebe.onrender.com/api/v1/user/${moment().format('DD-MM-YYYY')}/${username}`)
+        
+        .then(result => {
+            console.log(result)
+            alert('api hits')
+            props.setClockInData(result.data)
+
+        })
+        .catch(error => {
+            alert('api failed')
+
+            console.log(error)
+        })
 
     }
 
@@ -112,7 +138,9 @@ function Login(props) {
                 {/* <p>Forgot Password</p> */}
 
                 <div className='login-btn' >
-                    <Button style={{ borderradius: ' 20px', margin: '5px' }} variant="contained" onClick={handleApi} >Login</Button>
+                    <Button style={{ borderradius: ' 20px', margin: '5px' }} variant="contained"
+                        onClick={handleApi}
+                    >Login</Button>
                 </div>
             </div>
 

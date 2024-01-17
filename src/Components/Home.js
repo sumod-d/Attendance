@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import moment from "moment";
 
 
-function Home() {
+function Home({clockInData}) {
 
-
+    console.log(clockInData)
 
     const [checkInTime, setCheckInTime] = useState(null);
     const [checkOutTime, setCheckOutTime] = useState(null);
@@ -31,7 +31,7 @@ function Home() {
 
     return (
         <>
-            <CustomSwitch checkIn={checkInTime} checkOut={checkOutTime} isOn={isOn} handleToggle={handleOnClick} />
+            <CustomSwitch checkIn={checkInTime} checkOut={checkOutTime} isOn={isOn} handleToggle={handleOnClick} clockInData={clockInData} />
         </>
     );
 }
