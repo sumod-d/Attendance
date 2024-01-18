@@ -11,7 +11,8 @@ const CustomSwitch = props => {
     console.log("check in")
     axios.post(`https://practeasebe.onrender.com/api/v1/user/clock-in`, {
       clock_in_date: moment().format('DD-MM-YYYY'),
-      clock_in_time: moment(),
+      clock_in_time: moment().format(),
+      clock_out_time: moment().format(),
       user_email: "vivek@gmail.com"
     })
       .then((response) => {
@@ -22,9 +23,9 @@ const CustomSwitch = props => {
     }
     const handelClockOut = () => {
       console.log("check in")
-      axios.post(`https://practeasebe.onrender.com/api/v1/user/clock-out`, {
-        clock_in_date: moment().format('DD-MM-YYYY'),
-        clock_out_time: moment().format('L'),
+      axios.post(`https://practeasebe.onrender.com/api/v1/user/clock-in`, {
+        clock_in_date: moment().format('DDMMYYYY'),
+        
         user_email: "vivek@gmail.com"
       })
         .then((response) => {
@@ -60,9 +61,10 @@ const CustomSwitch = props => {
           style={{ background: props.isOn && props.onColor }}
           className="react-switch-label"
           htmlFor={"react-switch-new"}
+          onClick={handelClockIn}
+
         >
           <p className="checkIn"
-            onClick={handelClockIn}
           >{props.checkIn}</p>
 
           {!props.checkOut && <div className={"react-switch-button"}>  {!props.isOn ? "Clock in" : "Clock out"}</div>

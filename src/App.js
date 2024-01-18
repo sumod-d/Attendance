@@ -11,6 +11,7 @@ import store from './Redux/Store';
 
 
 function App() {
+  
   const [clockInData, setClockInData] = useState({})
 
   const [loggedIn, setLoggedIn] = useState(false);

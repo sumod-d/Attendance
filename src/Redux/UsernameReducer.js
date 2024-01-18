@@ -1,4 +1,5 @@
 import { SET_USERNAME } from './UsernameAction';
+import { createStore } from 'redux';
 
 const initialState = {
   username: '',
