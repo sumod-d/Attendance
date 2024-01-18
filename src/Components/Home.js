@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import moment from "moment";
 
 
-function Home({clockInData}) {
+function Home({clockInData,getClockInData,userNameGlobal}) {
 
     console.log(clockInData)
 
@@ -31,7 +31,7 @@ function Home({clockInData}) {
 
     return (
         <>
-            <CustomSwitch checkIn={checkInTime} checkOut={checkOutTime} isOn={isOn} handleToggle={handleOnClick} clockInData={clockInData} />
+            <CustomSwitch checkIn={checkInTime} checkOut={checkOutTime} isOn={isOn} handleToggle={handleOnClick} clockInData={clockInData} getClockInData={getClockInData} userNameGlobal={userNameGlobal}/>
         </>
     );
 }
